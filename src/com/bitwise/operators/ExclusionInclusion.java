@@ -1,7 +1,5 @@
 package com.bitwise.operators;
 
-import java.util.Scanner;
-
 /**
  * @author Rohit Arora 
  * 		Question: find out the number of numbers between 1 and n
