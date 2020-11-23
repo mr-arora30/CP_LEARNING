@@ -89,9 +89,36 @@ public class FastExponentiation {
 			return subprob * subprob;
 	}
 
+	public static int FastExpoIter(int a, int n) {
+		/*
+		 * This is iterative appproach to the same problem
+		 * we right shif n unitl it becomes 0
+		 * and in this process if n is odd then we multiply the number with ans
+		 * then right shift makes it even and as per even rule we sqaure the number and multiply 
+		 * with ans.
+		 */
+
+		int ans = 1;
+
+		while (n > 0) {
+
+			if ((n & 1) == 1) {
+				/*
+				 * n is odd.
+				 */
+				ans = a * ans;
+
+			}
+			n = n >> 1; // n is now even
+			ans = a*a*ans;
+		}
+		return ans;
+	}
+
 	public static void main(String[] args) {
 
 		System.out.println(FastExpo(5, 10));
+		System.out.println(FastExpoIter(5, 10));
 		System.out.println(count);
 	}
 
