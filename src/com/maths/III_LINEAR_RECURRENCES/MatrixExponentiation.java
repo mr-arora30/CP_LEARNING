@@ -54,9 +54,12 @@ import java.nio.charset.StandardCharsets;
  *      =>	 F<n> = T^n-1 X F<n-1>	
  *      
  *      Time Complexity is O(K^3 Log N)
+ *      Sources : https://codeforces.com/blog/entry/67776 
+ *      http://zobayer.blogspot.com/2010/11/matrix-exponentiation.html 
  *         -------------------------------------------------------------
+ *         Problem link : https://www.spoj.com/problems/SEQ/
  *         Problem 1 on Matrix Exponentiation
- * 
+ *          
  *         Sequence (ai) of natural numbers is defined as follows:
  * 
  *         ai = bi (for i <= k)
@@ -100,6 +103,7 @@ import java.nio.charset.StandardCharsets;
  *         8
  *         714
  *         257599514
+ *
  *
  */
 public class MatrixExponentiation {
@@ -151,6 +155,10 @@ public class MatrixExponentiation {
 		pw.close();
 	}
 
+	/**
+	 * @param n ---> nth term
+	 * @return -- nth term required result of the series
+	 */
 	private static long compute(long n) {
 
 		// base case
@@ -158,6 +166,7 @@ public class MatrixExponentiation {
 			return 0;
 		}
 		if (n <= k) {
+			//already this term is present
 			return b[(int) (n)];
 		}
 
@@ -240,6 +249,11 @@ public class MatrixExponentiation {
 		return matrixMultiply(X, X);
 	}
 
+	/**
+	 * @param a --> matrix 1 of 2 dimensions
+	 * @param b --> matrix 2 of 2 dimensions
+	 * @return ---> a x b
+	 */
 	private static long[][] matrixMultiply(long[][] a, long[][] b) {
 
 		long c[][] = new long[k + 1][k + 1];
