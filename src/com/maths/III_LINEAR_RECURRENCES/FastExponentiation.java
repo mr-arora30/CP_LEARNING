@@ -110,15 +110,15 @@ public class FastExponentiation {
 
 			}
 			n = n >> 1; // n is now even
-			ans = a*a*ans;
+			a = a*a;
 		}
 		return ans;
 	}
 
 	public static void main(String[] args) {
 
-		System.out.println(FastExpo(5, 10));
-		System.out.println(FastExpoIter(5, 10));
+		System.out.println(FastExpo(2,3));
+		System.out.println(FastExpoIter(2, 3));
 		System.out.println(count);
 	}
 
