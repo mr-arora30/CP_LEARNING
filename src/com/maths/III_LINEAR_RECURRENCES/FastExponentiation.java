@@ -50,7 +50,6 @@ public class FastExponentiation {
 	 *  				-->5(5^0)2	 -- Step 5 -->Total 5 steps
 	 */
 	public static int FastExpo(int a, int n) {
-		count++;
 		if (n == 0) {
 			/*
 			 * base case when n becomes 0
@@ -59,6 +58,7 @@ public class FastExponentiation {
 
 		}
 		int subprob = FastExpo(a, n / 2);
+		count++;
 
 		if ((n & 1) == 1) {
 			/*
@@ -117,8 +117,8 @@ public class FastExponentiation {
 
 	public static void main(String[] args) {
 
-		System.out.println(FastExpo(2,3));
-		System.out.println(FastExpoIter(2, 3));
+		System.out.println(FastExpo(5,11));
+		System.out.println(FastExpoIter(5, 11));
 		System.out.println(count);
 	}
 

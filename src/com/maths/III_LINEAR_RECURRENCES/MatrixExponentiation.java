@@ -20,13 +20,13 @@ import java.nio.charset.StandardCharsets;
  *         Step 2 : After getting K, Find out first K terms of the Sequence(This
  *         must be given in the problem).
  * 
- *         for fibanocci series first K terms of the sqeunce is given by 
+ *         for fibanocci series first K terms of the sequence is given by 
  *         F1 = [0]
  *         		[1]
  *         
  *         Step 3 : Find out the Transformation Matrix T of size (K X K)
  *         T is given by shifted identity matrix and last row as reverse
- *         order of coffecients of the first K terms. Which is given as:
+ *         order of coefficients of the first K terms. Which is given as:
  *              
  *         [0		1		0		0	..	]
  *         [0		0		1		0 	..	]
@@ -112,7 +112,7 @@ public class MatrixExponentiation {
 	static int k;
 	static long n;
 	long num;
-	static long a[];
+	//static long a[];
 	static long b[];
 	static long coff[];
 	public static void main(String[] args) throws  IOException {
@@ -127,30 +127,30 @@ public class MatrixExponentiation {
 		// printing inputs fastest
 		PrintWriter pw = new PrintWriter(System.out);
 
-		int t = Integer.parseInt(br.readLine());
+		int t = Integer.parseInt(br.readLine().trim());
 
-		while (t--> 0) {
-			k = Integer.parseInt(br.readLine());
-			a = new long[k + 1];
+		while (t-- > 0) {
+			k = Integer.parseInt(br.readLine().trim());
+			// a = new long[k + 1];
 			b = new long[k + 1];
 			coff = new long[k + 1];
 
-			StringTokenizer st = new StringTokenizer(br.readLine());
+			StringTokenizer st = new StringTokenizer(br.readLine().trim());
 			// f vector
 			for (int i = 1; i <= k; i++)
 				b[i] = Long.parseLong(st.nextToken());
 
 			// cofficients vector
-			st = new StringTokenizer(br.readLine());
+			st = new StringTokenizer(br.readLine().trim());
 			for (int i = 1; i <= k; i++)
 				coff[i] = Long.parseLong(st.nextToken());
 
 			// the value of n
-			n = Long.parseLong(br.readLine());
+			n = Long.parseLong(br.readLine().trim());
 
 			pw.println(compute(n));
 			pw.flush();
-			
+
 		}
 		pw.close();
 	}
@@ -166,7 +166,7 @@ public class MatrixExponentiation {
 			return 0;
 		}
 		if (n <= k) {
-			//already this term is present
+			// already this term is present
 			return b[(int) (n)];
 		}
 
@@ -178,6 +178,21 @@ public class MatrixExponentiation {
 			f1[i] = b[i];
 		}
 		// Step 2 creating TRANSFROMATION MATRIX
+		/*
+		 *  @formatter:off
+		 * The transformation matrix will be in the form of
+		 * 
+		 *   [0		1		0		0	..	]
+		 *   [0		0		1		0 	..	]
+		 *   [0		0		0		1	..	]
+		 *   [:		:		:		:	..	]	
+		 *   [C<k>	C<k-1>	C<k-2>	..	C<1>]
+		 *   
+		 *   Ck..c1 are coefficients of f0..fk
+		 *   since f vector is in the form C1 f(n-1)...+Ckf(n-k)
+		 *   --> c1fn-1......+Ckf0
+		 * 
+		 */
 		long T[][] = new long[k + 1][k + 1];
 
 		for (int i = 1; i <= k; i++) {
@@ -194,7 +209,7 @@ public class MatrixExponentiation {
 				} else {
 					/*
 					 * This is the last row.
-					 * Hence fill coffecients in reverse order
+					 * Hence fill coefficients in reverse order
 					 */
 					T[i][j] = coff[(k + 1) - j]; // as coff array starts from index 1, and is of size k+1
 					/*
@@ -213,7 +228,11 @@ public class MatrixExponentiation {
 		 * To get fn we need not multiply T matrix
 		 * with complete vector
 		 * what we do is we multiply only
-		 * first row T with the F vector so that we get the fn value *
+		 * first row T with the F vector so that we get the fn value as we
+		 * had raised T^n-1 that means f0...fn was shifted n-1 times and hence
+		 * the first row will give the result.
+		 * To be more clear as studied we get fn+1 at last row
+		 * when we raise T ^ n-k times.
 		 */
 		long res = 0;
 		for (int i = 1; i <= k; i++) {
@@ -227,7 +246,7 @@ public class MatrixExponentiation {
 	/**
 	 * Fast Exponentiation
 	 * 
-	 * @param t --> Transfromation matrix
+	 * @param t --> Transformation matrix
 	 * @param p --> Power to which T matrix need to b raised
 	 * @return--> T^n-1
 	 *            Complexity Log N

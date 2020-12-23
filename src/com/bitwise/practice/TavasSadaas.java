@@ -1,5 +1,7 @@
 package com.bitwise.practice;
 
+import java.util.Scanner;
+
 public class TavasSadaas {
 	
 	public static int getIndexOfLuckyNo(long no) {
@@ -40,7 +42,8 @@ public class TavasSadaas {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(getIndexOfLuckyNo(77));
+		Scanner sc = new Scanner(System.in);
+		System.out.println(getIndexOfLuckyNo(sc.nextInt()));
 
 	}
 
