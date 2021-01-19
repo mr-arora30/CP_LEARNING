@@ -1,4 +1,4 @@
-package com.recurssion_1;
+package com.recursion_1;
 
 import java.util.*;
 import java.io.*;

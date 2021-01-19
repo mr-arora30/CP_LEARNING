@@ -1,4 +1,4 @@
-package com.recurssion_2;
+package com.recursion_2;
 
 public class fastPower {
 
