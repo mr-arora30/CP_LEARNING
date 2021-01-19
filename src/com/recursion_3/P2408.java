@@ -5,7 +5,11 @@ import java.io.PrintWriter;
 /**
  * @author Rohit Arora
  * 2048 Problem is converting number to their Spellings
- * This porblem is solved using recursion pretty easily
+ * like 2048 --> Two Zero Four Eight
+ * This porblem is solved using recursion pretty easily..
+ * 
+ * The another problem is to convert number it to words
+ * like 20048---> Twenty Thousand Forty Eight
  */
 public class P2408 {
 
@@ -23,7 +27,7 @@ public class P2408 {
 
 		printSpells(1048);
 		System.out.println();
-		System.out.println(convertToWords(10048));
+		System.out.println(convertToWords(148));
 	}
 
 	public static void printSpells(int n) {
@@ -41,18 +45,18 @@ public class P2408 {
 
 		// handles digits at ten millions and hundred
 		// millions places (if any)
-		out += numToWords((int) (n / 10000000), " crore ");
+		out += numToWords((int) (n / 10000000), "crore ");
 
 		// handles digits at hundred thousands and one
 		// millions places (if any)
-		out += numToWords((int) ((n / 100000) % 100), " lakh ");
+		out += numToWords((int) ((n / 100000) % 100), "lakh ");
 
 		// handles digits at thousands and tens thousands
 		// places (if any)
-		out += numToWords((int) ((n / 1000) % 100), " thousand ");
+		out += numToWords((int) ((n / 1000) % 100), "thousand ");
 
 		// handles digit at hundreds places (if any)
-		out += numToWords((int) ((n / 100) % 10), " hundred ");
+		out += numToWords((int) ((n / 100) % 10), "hundred ");
 
 		if (n > 100 && n % 100 > 0) {
 			out += "and ";
@@ -70,9 +74,9 @@ public class P2408 {
 		if (n > 19) {
 			str += ten[n / 10] +" " +one[n % 10];
 		} else {
-			str += one[n];
+			str += one[n].equals("") ? "":one[n]+" ";
 		}
-
+			
 		// if n is non-zero
 		if (n != 0) {
 			str += s;
