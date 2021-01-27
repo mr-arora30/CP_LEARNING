@@ -1,7 +1,12 @@
+package com.cf697;
 import java.io.*;
 
 import java.util.*;
 
+/**
+ * @author Rohit Arora
+ * https://codeforces.com/contest/1475/problem/A
+ */
 public class A_ODD_DIVISORS {
 
 	public static void main(String args[]) throws IOException {

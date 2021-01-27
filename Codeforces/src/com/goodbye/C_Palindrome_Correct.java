@@ -2,7 +2,12 @@ package com.goodbye;
 import java.util.*;
 import java.io.*;
 
+/**
+ * @author Rohit Arora
+ *https://codeforces.com/contest/1466/problem/C
+ */
 public class C_Palindrome_Correct {
+	
 	public static void main(String args[]) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

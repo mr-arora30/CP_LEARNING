@@ -5,6 +5,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.*;
 
+/**
+ * @author Rohit Arora
+ * https://codeforces.com/contest/1466/problem/B
+ *
+ */
 public class GOODBYE_B {
 	public static void main(String args[]) throws IOException {
 

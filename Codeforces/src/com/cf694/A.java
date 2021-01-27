@@ -3,6 +3,10 @@ import java.io.*;
 
 import java.util.*;
 
+/**
+ * @author Rohit Arora
+ *https://codeforces.com/contest/1471/problem/A
+ */
 public class A {
 	public static void main(String args[]) throws IOException {
 

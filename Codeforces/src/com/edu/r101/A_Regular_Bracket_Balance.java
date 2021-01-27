@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Stack;
 
+/**
+ * @author Rohit Arora
+ *https://codeforces.com/contest/1469/problem/A
+ */
 public class A_Regular_Bracket_Balance {
 
 	public static void main(String args[]) throws IOException {

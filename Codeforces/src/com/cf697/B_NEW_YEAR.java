@@ -1,9 +1,14 @@
+package com.cf697;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
+/**
+ * @author Rohit Arora
+ * https://codeforces.com/contest/1475/problem/B
+ */
 public class B_NEW_YEAR {
 
 	public static void main(String args[]) throws IOException {
