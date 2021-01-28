@@ -4,7 +4,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Rohit Arora
+ * https://leetcode.com/problems/count-vowels-permutation/
+ */
 public class CountVowelsPermutations {
+	
 	private static final int MOD = 1000000007;
 	/*
 	 * Either take array DP or Map for Top Down DP
@@ -31,8 +36,8 @@ public class CountVowelsPermutations {
 	}
 
 	/**
-	 * @param c -- char
-	 * @param n -- length
+	 * @param c   -- char
+	 * @param n   -- length
 	 * @param res -- count
 	 *            This is recursive approach, here we try to find
 	 *            the count of each vowel permutation using recursive
@@ -67,8 +72,9 @@ public class CountVowelsPermutations {
 	/**
 	 * @param n
 	 * @param c
-	 * This Approach is Top Down apprach which is simply taking recursive
-	 * approach and saving its state and returning the state whenever required.
+	 *          This Approach is Top Down apprach which is simply taking recursive
+	 *          approach and saving its state and returning the state whenever
+	 *          required.
 	 * @return
 	 */
 	public long solve1(int n, char c) {
