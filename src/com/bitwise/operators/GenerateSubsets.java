@@ -22,7 +22,7 @@ import java.util.TreeSet;
  *         ...
  *         
  *         to filter chars you need to extract last bit
- *         if bit is 1 then contatinate to the ans
+ *         if bit is 1 then concatenate  to the ans
  *         else loop until that number becomes 0
  *         
  * 
@@ -67,7 +67,7 @@ public class GenerateSubsets {
 
 	public static void main(String[] args) {
 
-		String a = "abcd";
+		String a = "abc";
 
 		print_subsets(a);
 	}

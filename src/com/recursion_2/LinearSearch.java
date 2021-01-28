@@ -135,5 +135,6 @@ public class LinearSearch {
 		return storeAllOcc(a, --size, j, key);
 
 	}
+	
 
 }
