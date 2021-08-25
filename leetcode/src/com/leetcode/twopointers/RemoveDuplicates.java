@@ -25,12 +25,13 @@ As the input array is sorted, therefore, one way to do this is to shift the elem
   public static int remove(int[] arr) {
    int nextNonDuplicate=1; // index of the next non-duplicate element
    for(int i=1;i<arr.length;i++){    
-      if(arr[nextNonDuplicate-1]!=arr[i]){
-        arr[nextNonDuplicate]=arr[i];
-            nextNonDuplicate++;
+      if(arr[nextNonDuplicate-1]!=arr[i]){ // [2, 2, 3, 3, 6, 9, 9],
+        arr[nextNonDuplicate]=arr[i]; //[2,3,3,6,9,9]
+            nextNonDuplicate++; //2, increment upto last existing non duplicate element in the array
       }
   
-   }
+   }  
+   System.out.println(Arrays.toString(Arrays.copyOf(arr,nextNonDuplicate)));
    return nextNonDuplicate;
   }
 }
