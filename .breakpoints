@@ -7,6 +7,14 @@
         "version": 1055,
         "index": 145
       }
+    ],
+    "leetcode/src/com/leetcode/tree_bfs/LevelOrderTraversal.java": [
+      {
+        "id": "3f945f70-9b5d-44b2-bf5d-e5bbfded538a",
+        "line": 10,
+        "version": 1174,
+        "index": 253
+      }
     ]
   }
 }

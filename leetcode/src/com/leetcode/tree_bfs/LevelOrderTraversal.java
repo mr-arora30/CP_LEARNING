@@ -1,7 +1,7 @@
 import java.util.*;
 /* do a level order traversal in tree*/
 
-
+//expected op: [[12], [7, 1], [9, 10, 5]]
 public class LevelOrderTraversal{
 
    public static List<List<Integer>> traverse(TreeNode root) {
