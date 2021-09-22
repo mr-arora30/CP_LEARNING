@@ -1,0 +1,1 @@
+Induction Base Hypothesis is generally used in trees and  linked lists\lists

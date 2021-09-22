@@ -1,5 +1,5 @@
 public class MaxHeightOfTree {
-
+/* Max height of a binary tree*/
   public static int maxDepth(TreeNode root) {
 
     if (root == null) //base condition
