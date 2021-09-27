@@ -11,7 +11,7 @@ public class TowersOfHanoi {
 		if(n==0)
 			return;
 		move(n-1, src, dest, helper);
-		System.out.println("Sifting from "+src+" to "+helper);
+		System.out.println("Sifting from "+src+" to "+dest);
 		move(n-1, helper, src, dest);
 		
 	}
