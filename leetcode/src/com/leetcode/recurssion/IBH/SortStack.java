@@ -1,3 +1,5 @@
+package com.leetcode.recurssion.IBH;
+
 import java.util.*;
 
 /*Using same hypothesis and induction as Sorted Array problem, just at base condition of insert is modified as here the stack top needs to be the smallest and bottom of the stack is largert*/

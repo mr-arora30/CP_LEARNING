@@ -1,4 +1,6 @@
- public class Subsets {
+package com.leetcode.recurssion.InpOut;
+
+public class Subsets {
 
   public static void main(String args[]) {
     System.out.println(subsets("abc", " "));

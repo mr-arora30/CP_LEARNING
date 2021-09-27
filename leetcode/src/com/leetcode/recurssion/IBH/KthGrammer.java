@@ -1,3 +1,5 @@
+package com.leetcode.recurssion.IBH;
+
 /*https://leetcode.com/problems/k-th-symbol-in-grammar/*/
 public class KthGrammer{
   /* Replace  0 --> 0 1
