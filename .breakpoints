@@ -1,19 +1,11 @@
 {
   "files": {
-    "leetcode/src/com/leetcode/slidingwindow/PermutationInString.java": [
+    "leetcode/src/com/leetcode/recurssion/Inp-Out/Subsets.java": [
       {
-        "id": "a7288b3d-fddd-4cf1-80ac-a915cd8d81de",
-        "line": 6,
-        "version": 1055,
-        "index": 145
-      }
-    ],
-    "leetcode/src/com/leetcode/tree_bfs/LevelOrderTraversal.java": [
-      {
-        "id": "3f945f70-9b5d-44b2-bf5d-e5bbfded538a",
-        "line": 10,
-        "version": 1192,
-        "index": 294
+        "id": "542065cd-6228-43fb-b1e0-56de75c82334",
+        "line": 18,
+        "version": 669,
+        "index": 334
       }
     ]
   }

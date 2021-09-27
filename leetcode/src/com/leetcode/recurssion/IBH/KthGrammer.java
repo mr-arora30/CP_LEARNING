@@ -24,11 +24,9 @@ public class KthGrammer{
     }
     static int solve(int n, int k){
       
-        if(n==1 && k==1)
-            
+        if(n==1 && k==1)  
             return 0;    
-       
-        
+
         int mid =(int) Math.pow(2,n-1)/2;
         
         if(k<=mid)
@@ -37,7 +35,5 @@ public class KthGrammer{
         
         else
             return 1-solve(n-1,k-mid);
-        
-        
     }
 }
