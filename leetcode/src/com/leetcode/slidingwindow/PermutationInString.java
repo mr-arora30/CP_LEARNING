@@ -1,3 +1,5 @@
+package com.leetcode.slidingwindow;
+
 import java.util.*;
 class PermutationInString{
 /*

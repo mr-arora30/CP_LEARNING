@@ -1,3 +1,5 @@
+package com.leetcode.tree_bfs;
+
 import java.util.*;
 
 public class ZigZagTraversal{
@@ -34,22 +36,22 @@ public class ZigZagTraversal{
     root.left.left = new TreeNode(9);
     root.right.left = new TreeNode(10);
     root.right.right = new TreeNode(5);
-    List<List<Integer>> result = ReverseLevelOrder.traverse(root);
-    System.out.println("Reverse level order traversal: " + result);
+  //  List<List<Integer>> result = ReverseLevelOrder.traverse(root);
+ //   System.out.println("Reverse level order traversal: " + result);
   }
-}
 
-class TreeNode{
-  int val;
-  TreeNode left;
-  TreeNode right;
-  TreeNode(){};
-  TreeNode(int val){
-    this.val=val;
-  }
-  TreeNode(int val,TreeNode left,TreeNode right){
-    this.val=val;
-    this.left=left;
-    this.right=right;
-  }
+   static class TreeNode{
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(){};
+        TreeNode(int val){
+            this.val=val;
+        }
+        TreeNode(int val, TreeNode left, TreeNode right){
+            this.val=val;
+            this.left=left;
+            this.right=right;
+        }
+    }
 }

@@ -1,3 +1,5 @@
+package com.leetcode.twopointers;
+
 import java.util.*;
 class RemoveDuplicates { 
   public static void main(String args[]){
