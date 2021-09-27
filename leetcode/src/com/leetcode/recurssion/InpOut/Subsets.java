@@ -6,16 +6,17 @@
 
   static String subsets(String in, String op) {
 
-    if (in.length() == 0)
+    if (in.length() == 0){
+      System.out.println(op);
       return op;
+    }
+      
 
     String op1 = op;
     String op2 = op;
-    op2 = in.charAt(0) + op;
-    /*
-     * if(in.length()==1) in=null; else
-     */
-    in = in.substring(0, in.length() - 1);
+    op2 = op+in.charAt(0);
+   
+    in = in.substring(1);
 
     subsets(in, op1);
     subsets(in, op2);
