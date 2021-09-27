@@ -1,5 +1,3 @@
-package com.leetcode.tree_bfs;
-import com.leetcode.tree_bfs.TreeNode;
 import java.util.*;
 /* do a level order traversal in tree*/
 
@@ -48,4 +46,18 @@ The space complexity of the above algorithm will be O(N)O(N) as we need to retur
     List<List<Integer>> result = LevelOrderTraversal.traverse(root);
      System.out.println("Level order traversal: " + result);
     }
+}
+class TreeNode{
+  int val;
+  TreeNode left;
+  TreeNode right;
+  TreeNode(){};
+  TreeNode(int val){
+    this.val=val;
+  }
+  TreeNode(int val,TreeNode left,TreeNode right){
+    this.val=val;
+    this.left=left;
+    this.right=right;
+  }
 }

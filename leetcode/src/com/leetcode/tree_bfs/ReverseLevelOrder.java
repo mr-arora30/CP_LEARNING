@@ -1,4 +1,3 @@
-package com.leetcode.tree_bfs;
 import java.util.*;
 /* traverse and store the nodes at each level in reverse order*/
 /*This problem follows the Binary Tree Level Order Traversal pattern. We can follow the same BFS approach. The only difference will be that instead of appending the current level at the end, we will append the current level at the beginning of the result list.*/
@@ -41,3 +40,17 @@ public class ReverseLevelOrder{
   }
 }
 
+class TreeNode{
+  int val;
+  TreeNode left;
+  TreeNode right;
+  TreeNode(){};
+  TreeNode(int val){
+    this.val=val;
+  }
+  TreeNode(int val,TreeNode left,TreeNode right){
+    this.val=val;
+    this.left=left;
+    this.right=right;
+  }
+}
