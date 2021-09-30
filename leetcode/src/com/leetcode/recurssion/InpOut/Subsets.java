@@ -9,7 +9,7 @@ public class Subsets {
     static String subsets(String in, String op) {
 
         if (in.length() == 0) {
-           // System.out.println(op);
+           System.out.println(op);
             return op;
         }
 
